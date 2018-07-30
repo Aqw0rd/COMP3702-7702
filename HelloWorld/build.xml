@@ -5,7 +5,11 @@
     </target>
 
     <target name="run" depends="compile">
-        <java classname="Main" fork="true"></java>
+        <java classname="Main" fork="true">
+            <arg value="${arg0}"/>
+            <arg value="${arg1}"/>
+            <arg value="${arg2}"/>
+        </java>
     </target>
 
 </project>
