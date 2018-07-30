@@ -1,4 +1,7 @@
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class Main {
 
@@ -11,16 +14,15 @@ public class Main {
         try {
             File inputFile = new File(fileName);
             BufferedReader br = new BufferedReader(new FileReader(inputFile));
-            FileWriter fw = new FileWriter(outputFileName, true);
+            FileWriter fw = new FileWriter(outputFileName, false);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter out = new PrintWriter(bw);
-
             String st;
+            String temp = "";
             while((st = br.readLine()) != null){
-                st = st.replaceAll(letter, "");
-
-                out.println(st);
+                temp += st.replaceAll(letter, "") + "\n";
             }
+            out.println(temp);
             out.close();
             br.close();
             fw.close();

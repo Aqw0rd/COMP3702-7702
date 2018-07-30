@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="365667d0-5ea0-4a22-82b2-2bf9ec010525" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Practical1_3/.idea/ant.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Practical1_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Practical1_3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Practical1_3/build.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Practical1_3/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Practical1_3/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practical1_3/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Practical1_3/src/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practical1_3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Practical1_3/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practical1_3/src/output.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -204,12 +203,12 @@
       <workItem from="1532860773380" duration="579000" />
       <workItem from="1532861876745" duration="151000" />
       <workItem from="1532862068889" duration="2208000" />
-      <workItem from="1532923533704" duration="658000" />
+      <workItem from="1532923533704" duration="1053000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3596000" />
+    <option name="totallyTimeSpent" value="3991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="760" y="0" width="783" height="832" extended-state="0" />
