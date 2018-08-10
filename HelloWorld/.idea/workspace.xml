@@ -4,9 +4,8 @@
     <list default="true" id="365667d0-5ea0-4a22-82b2-2bf9ec010525" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Practical1_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Practical1_3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Practical1_3/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Practical1_3/src/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practical1_3/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Practical1_3/build.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Practical1_3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Practical1_3/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Practical1_3/src/output.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,7 +47,7 @@
     <session id="1299979620">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.9" value="1" />
@@ -117,9 +116,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="950" />
+    <option name="x" value="948" />
     <option name="width" value="979" />
-    <option name="height" value="1040" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -211,7 +210,7 @@
     <option name="totallyTimeSpent" value="3991000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="760" y="0" width="783" height="832" extended-state="0" />
+    <frame x="759" y="0" width="783" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16597511" />

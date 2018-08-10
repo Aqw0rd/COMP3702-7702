@@ -1,15 +1,28 @@
-<project name="Practical1_3" basedir="./src">
+<project name="Practical1_3" basedir=".">
 
     <target name="compile">
-        <javac srcdir="." includeantruntime="true" includes="Main.java" destdir="."></javac>
+        <mkdir dir="bin" />
+        <javac srcdir="src" includeantruntime="false" destdir="bin" />
     </target>
 
-    <target name="run" depends="compile">
+    <target name="jars" depends="run" />
+
+    <target name="run" depends="compile" description="Practical1_3.jar">
+        <jar jarfile="Practical1_3.jar" includes="Main.class" basedir="bin">
+            <manifest>
+                <attribute name="Main" value="Main" />
+            </manifest>
+        </jar>
         <java classname="Main" fork="true">
             <arg value="${arg0}"/>
             <arg value="${arg1}"/>
             <arg value="${arg2}"/>
         </java>
+    </target>
+
+    <target name="clean" description="Remove all binaries">
+        <delete dir="bin" />
+        <delete file="Practical1_3.jar" />
     </target>
 
 </project>

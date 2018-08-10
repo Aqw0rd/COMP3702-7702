@@ -1,4 +1,3 @@
-package com.company;
 
 public class State {
     private State parent;
