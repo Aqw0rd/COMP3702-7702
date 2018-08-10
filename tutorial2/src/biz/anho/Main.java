@@ -1,17 +1,19 @@
 package biz.anho;
 
 import biz.anho.State;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Stack;
+
+import java.util.*;
 
 public class Main {
     static Stack<String> actions = new Stack<>();
     public static void main(String[] args) {
         long start, end = 0;
         boolean s = false;
+        boolean isValid = parityCheck("1348627_5", "1238_4765");
+        System.out.println(isValid);
+
         start = System.currentTimeMillis();
-        s = depthFirst("1348627_5","1238_4765");
+        s = breadthFirst("1348627_5","1238_4765");
         end = System.currentTimeMillis();
         System.out.println("Solvable: " + s + ", time: " + (end - start) + "ms");
         while(!actions.empty())
@@ -19,15 +21,16 @@ public class Main {
         System.out.println("\n");
 
         start = System.currentTimeMillis();
-        s = depthFirst("281_43765","1238_4765");
+        s = breadthFirst("281_43765","1238_4765");
         end = System.currentTimeMillis();
         System.out.println("Solvable: " + s + ", time: " + (end - start) + "ms");
         while(!actions.empty())
             System.out.println(actions.pop());
+
         System.out.println("\n");
 
         start = System.currentTimeMillis();
-        s= depthFirst("281463_75","1238_4765");
+        s= breadthFirst("281463_75","1238_4765");
         end = System.currentTimeMillis();
         System.out.println("Solvable: " + s + ", time: " + (end - start) + "ms");
         while(!actions.empty())
@@ -35,16 +38,15 @@ public class Main {
 
     }
 
-    public static Boolean breadthFirst(String initial, String goal){
+    static Boolean breadthFirst(String initial, String goal){
         long start = System.currentTimeMillis();
         State root = new State(initial, null, "start");
-        ArrayList<State> queue = new ArrayList<State>();
+        Queue<State> queue = new LinkedList<State>();
         ArrayList<String> visited = new ArrayList<>();
         queue.add(root);
         while(queue.size() > 0){
-            State t = queue.get(0);
+            State t = queue.remove();
             visited.add(t.getValue());
-            queue.remove(0);
             t.setVisited(true);
             if(t.getValue().equals(goal)) {
                 System.out.println("Solved in: " + (System.currentTimeMillis() - start) + "ms");
@@ -73,7 +75,7 @@ public class Main {
         return false;
     }
 
-    public static void backTrack(State state){
+    static void backTrack(State state){
         if(state.getParent() == null) return;
         actions.push(state.action);
         backTrack(state.getParent());
@@ -118,7 +120,25 @@ public class Main {
         return false;
     }
 
-    public static String getNewString(int x, int y, String value){
+    static Boolean parityCheck(String start, String goal){
+        int p1 = parity(start);
+        int p2 = parity(goal);
+        return  p1 == p2;
+    }
+
+    static int parity(String value){
+        String[] temp = value.replace("_","").split("");
+        int parity = 0;
+        for(String s:temp){
+            int a = Arrays.asList(temp).indexOf(s) + 1;
+            for(int i = a  ; i < temp.length ; i++){
+                if(Integer.parseInt(temp[i]) < Integer.parseInt(s)) parity++;
+            }
+        }
+        return (parity % 2);
+    }
+
+    static String getNewString(int x, int y, String value){
         int underscore = value.indexOf('_');
         int newIndex = (y*3) + x;
         String[] stringlist = value.split("");
