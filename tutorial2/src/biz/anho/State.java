@@ -1,12 +1,15 @@
+package biz.anho;
 
 public class State {
     private State parent;
     private boolean visited;
     private String value;
     private State[] children;
-    public State(String value, State parent){
+    public String action;
+    public State(String value, State parent, String action){
         this.value = value;
         this.parent = parent;
+        this.action = action;
     }
 
     public void setVisited(boolean visited) {
